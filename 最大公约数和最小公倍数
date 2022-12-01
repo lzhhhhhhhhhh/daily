@@ -1,0 +1,17 @@
+//编写程序，从键盘读入两个整数m和n(使用空格分隔)，然后输出m和n的最大公约数和最小公倍数到屏幕
+#include<stdio.h>
+int main()
+{
+    long long a,r,m,n;
+    scanf("%lld %lld",&m,&n);
+    a=m*n;
+	r=m%n;
+    while(r!=0){
+        m=n;
+        n=r;
+        r=m%n;
+    }
+    printf("%lld\n",n);
+    printf("%lld",a/n);
+    return 0;
+}
